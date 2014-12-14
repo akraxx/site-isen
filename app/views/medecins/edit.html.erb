@@ -1,0 +1,16 @@
+<h1>Editing medecin</h1>
+
+<% form_for(@medecin) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @medecin %> |
+<%= link_to 'Back', medecins_path %>

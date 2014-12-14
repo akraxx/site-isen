@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  medecin: 
+  patient: 
+  date: 2010-02-04 18:06:48
+
+two:
+  medecin: 
+  patient: 
+  date: 2010-02-04 18:06:48

@@ -1,0 +1,22 @@
+<h1>Nouvelle consultation</h1>
+
+<%= @test %>
+<% form_for(@consultation) do |f| %>
+	<%= f.error_messages %>
+	
+	<p>
+	<%= f.label 'date' %>
+	<%= f.datetime_select 'date' %>
+	</p>
+	<p>
+	<%= f.label 'Medecin' %>
+	<%= f.collection_select 'medecin_id', @medecins, 'id', 'name' %>
+	</p>
+	<p>
+	<%= f.label 'Patient' %>
+	<%= f.collection_select 'patient_id', @patients, 'id', 'name' %>
+        </p>
+	<p>
+	<%= f.submit 'Create' %>
+	</p>
+<% end %>

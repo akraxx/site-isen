@@ -1,0 +1,16 @@
+<p>
+  <b>Name:</b>
+  <%=h @medecin.name %>
+</p>
+
+<h2>Ses prochains rendez vous</h2>
+  <%=  select_tag 'medecin', options_from_collection_for_select(@medecin.patients, 'id', 'name') %>
+
+
+<% @medecin.patients.each do |p| %>
+	<p><%=h p.name %></p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_medecin_path(@medecin) %> |
+<%= link_to 'Back', medecins_path %>

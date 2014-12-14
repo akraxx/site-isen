@@ -1,0 +1,17 @@
+<h1>Consultations</h1>
+
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Medecin</th>
+		<th>Patient</th>
+	</tr>
+<% @consultations.each do |c| %>
+	<tr>
+		<td><%= c.date %></td>
+		<td><%= c.medecin.name %></td>
+		<td><%= c.patient.name %></td>
+	</tr>
+<% end %>
+
+</table>
